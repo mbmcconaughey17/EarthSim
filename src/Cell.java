@@ -46,9 +46,9 @@ public class Cell {
 			tLen = 0;
 		else
 			tLen = this.north.bLen;			//the length of the top of this cell is the length of the bottom on the north cell
-		bLen = (Math.cos(bLat)*rLen) * 2 + tLen;
+		bLen = (Math.cos(Math.toRadians(bLat))*rLen) * 2 + tLen;
 		
-		area = ((tLen + bLen)/ 2)* Math.sin(bLat);
+		area = ((tLen + bLen)/ 2)* Math.sin(Math.toRadians(bLat));
 	}
 	
 	
